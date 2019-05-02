@@ -1,7 +1,7 @@
 import React from 'react'
 import './CommentSection.css'
 import Comment from '../Comment/Comment'
-// import moment from 'moment';
+import moment from 'moment';
 
 function CommentSection(props) {
     return (
@@ -12,8 +12,7 @@ function CommentSection(props) {
                     comment={comment}
                 />
             })}
-            <p className="timestamp">{props.timestamp}</p>
-            {/* <p>{moment(props.timestamp).format()}</p> */}
+            <p className="timestamp">{moment(props.timestamp, "LLL").fromNow()}</p>
 
             <div className="comment-input-row">
                 <input placeholder="Add a comment..." />

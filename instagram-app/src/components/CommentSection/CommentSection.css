@@ -5,4 +5,12 @@
 
 .comment-input-row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+}
+
+input {
+    height: 20px;
+    border: none;
 }
