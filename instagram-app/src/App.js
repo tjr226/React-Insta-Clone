@@ -1,14 +1,25 @@
-import React from 'react';
+import React from 'react'
 // import logo from './logo.svg';
-import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
+import './App.css'
+import SearchBar from './components/SearchBar/SearchBar'
+import PostContainer from './components/PostContainer/PostContainer'
+import dummyData from './dummy-data'
 
 function App() {
+
   return (
-    <div className="App">
+    <div className="insta-app-container">
+      {/* render search bar */}
       <SearchBar />
-      {/* <p>Insta post placeholder</p> */}
-      {/* <img alt="lorem" src="https://picsum.photos/200/200"></img> */}
+      {/* render one PostContainer for each post */}
+      {dummyData.map(post => {
+        return <PostContainer
+          key={post.id}
+          post={post}
+        />
+      })
+      }
+
     </div>
   );
 }

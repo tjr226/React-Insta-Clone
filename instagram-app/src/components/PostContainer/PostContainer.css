@@ -1,0 +1,12 @@
+.post-header {
+    display: flex;
+}
+
+.post-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.comment-input-row {
+    display: flex;
+}
