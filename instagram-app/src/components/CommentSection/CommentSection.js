@@ -12,7 +12,7 @@ function CommentSection(props) {
                     comment={comment}
                 />
             })}
-            <p>{props.timestamp}</p>
+            <p className="timestamp">{props.timestamp}</p>
             {/* <p>{moment(props.timestamp).format()}</p> */}
 
             <div className="comment-input-row">

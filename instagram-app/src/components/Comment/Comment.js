@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 function Comment(props) {
     return (
         <div className="individual-comment">
-            <p>{props.comment.username}</p>
-            <p>{props.comment.text}</p>
+            <p className="comment-username">{props.comment.username}</p>
+            <p className="comment-text">{props.comment.text}</p>
         </div>
     )
 }

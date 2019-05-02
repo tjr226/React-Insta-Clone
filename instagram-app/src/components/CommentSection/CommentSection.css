@@ -1,0 +1,8 @@
+.timestamp {
+    font-size: 0.5rem;
+    color: grey;
+}
+
+.comment-input-row {
+    display: flex;
+}

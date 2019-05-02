@@ -1,12 +1,45 @@
+.post-container {
+    
+}
+
 .post-header {
     display: flex;
+    align-items: center;
 }
 
-.post-icon {
+.post-header img {
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    margin-left: 2%;
+}
+
+.post-header p {
+    font-size: .8rem;
+    padding-left: 2%;
+}
+
+.post-image img {
+    width: 98%;
+    padding: 5px 1%;
+}
+
+.post-icons {
+    padding-left: 2%;
+}
+
+.post-icons img {
     width: 20px;
     height: 20px;
+    padding-right: 2%;
 }
 
-.comment-input-row {
-    display: flex;
+.post-likes {
+    padding-left: 2%;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.comment-section {
+    padding-left: 2%;
 }

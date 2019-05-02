@@ -10,7 +10,6 @@ function PostContainer(props) {
 
     return (
         <div className="post-container card">
-
             <div className="post-header">
                 <img src={props.post.thumbnailUrl} alt="tmb" />
                 <p>{props.post.username}</p>
@@ -19,16 +18,17 @@ function PostContainer(props) {
                 <img src={props.post.imageUrl} alt="post" />
             </div>
             <div className="post-icons">
-                <img src={messageIcon} alt="message icon" className="post-icon" />
                 <img src={heartIcon} alt="heart icon" className="post-icon" />
+                <img src={messageIcon} alt="message icon" className="post-icon" />
+
             </div>
-            <p>{props.post.likes} likes</p>
+            <p className="post-likes">{props.post.likes} likes</p>
 
             <div className="comment-section">
-                <CommentSection 
-                    comments={props.post.comments} 
+                <CommentSection
+                    comments={props.post.comments}
                     timestamp={props.post.timestamp}
-                    />
+                />
             </div>
 
         </div>

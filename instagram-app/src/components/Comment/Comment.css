@@ -1,3 +1,10 @@
 .individual-comment {
     display: flex;
+    font-size: .8rem;
 }
+
+.comment-username {
+    font-weight: bold;
+    padding-right: 1%;
+}
+
