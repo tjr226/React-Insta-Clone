@@ -1,8 +1,38 @@
-.search-bar {
+
+
+.search-container {
     display: flex;
+    align-items: center;
 }
 
-.logo-img {
+.pipe {
+    /* no formatting necessary yet */
+}
+
+.insta-logo-img {
     width: 20px;
     height: 20px;
+
+    padding: 0px 10px;
+}
+
+.insta-logo-cursive {
+    width: 50px;
+    height: 20px;
+    padding: 0px 10px;
+}
+
+.search-input {
+    height: 20px;
+}
+
+.icon-section {
+    display: flex;
+    padding-left: 10px;
+}
+
+.search-bar-icon {
+    width: 20px;
+    height: 20px;
+    padding: 0 5px;
 }
