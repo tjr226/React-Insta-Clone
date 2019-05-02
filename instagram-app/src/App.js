@@ -5,23 +5,30 @@ import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
 import dummyData from './dummy-data'
 
-function App() {
+class App extends React.Component {
+  state = {
+    posts: [],
+  }
 
-  return (
-    <div className="insta-app-container">
-      {/* render search bar */}
-      <SearchBar />
-      {/* render one PostContainer for each post */}
-      {dummyData.map(post => {
-        return <PostContainer
-          key={post.id}
-          post={post}
-        />
-      })
-      }
+  componentDidMount() {
+    this.setState({ posts: dummyData })
+  }
 
-    </div>
-  );
+  render() {
+    return (
+      <div className="insta-app-container">
+
+        <SearchBar />
+        {this.state.posts.map(post =>
+          <PostContainer
+            key={post.id}
+            post={post}
+          />)
+        };
+
+      </div>
+    );
+  };
 }
 
 
