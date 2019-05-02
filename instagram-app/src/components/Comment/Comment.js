@@ -17,7 +17,7 @@ Comment.propTypes = {
         id: PropTypes.string.isRequired,
         username: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
-    })
+    }).isRequired,
 }
 
 export default Comment

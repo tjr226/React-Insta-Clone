@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 function PostContainer(props) {
 
     return (
-        <div className="post-container">
+        <div className="post-container card">
 
             <div className="post-header">
                 <img src={props.post.thumbnailUrl} alt="tmb" />
@@ -25,15 +25,14 @@ function PostContainer(props) {
             <p>{props.post.likes} likes</p>
 
             <div className="comment-section">
-                <CommentSection post={props.post} />
-            </div>
-            <p>{props.post.timestamp}</p>
-            <div className="comment-input-row">
-                <input placeholder="Add a comment..." />
-                <p>&#8943;</p>
+                <CommentSection 
+                    comments={props.post.comments} 
+                    timestamp={props.post.timestamp}
+                    />
             </div>
 
         </div>
+
     )
 
 
@@ -42,15 +41,15 @@ function PostContainer(props) {
 }
 PostContainer.propTypes = {
     post: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      username: PropTypes.string.isRequired,
-      thumbnailUrl: PropTypes.string.isRequired,
-      imageUrl: PropTypes.string.isRequired,
-      likes: PropTypes.number.isRequired,
-      timestamp: PropTypes.string.isRequired,
-      comments: PropTypes.array.isRequired,
+        id: PropTypes.string.isRequired,
+        username: PropTypes.string.isRequired,
+        thumbnailUrl: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired,
+        timestamp: PropTypes.string.isRequired,
+        comments: PropTypes.array.isRequired,
     }).isRequired,
-  };
+};
 
 export default PostContainer
 
