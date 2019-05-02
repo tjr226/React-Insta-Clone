@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection'
 
 import heartIcon from '../images/heart.png'
 import messageIcon from '../images/speech-bubble.png'
+import PropTypes from 'prop-types';
 
 function PostContainer(props) {
 
@@ -34,7 +35,22 @@ function PostContainer(props) {
 
         </div>
     )
+
+
+
+
 }
+PostContainer.propTypes = {
+    post: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      username: PropTypes.string.isRequired,
+      thumbnailUrl: PropTypes.string.isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      likes: PropTypes.number.isRequired,
+      timestamp: PropTypes.string.isRequired,
+      comments: PropTypes.array.isRequired,
+    }).isRequired,
+  };
 
 export default PostContainer
 
