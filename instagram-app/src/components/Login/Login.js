@@ -1,14 +1,11 @@
 import React from 'react'
 import instaLogo from '../images/instagram-cursive.png'
+import './Login.css'
 
 class Login extends React.Component {
-    login() {
-        localStorage.setItem('username', "username");
-        this.setState(() => {});
+    login = event => {
+        localStorage.setItem('username', event.target.username.value)
     }
-
-    
-
 
     render() {
         return (
@@ -20,18 +17,23 @@ class Login extends React.Component {
                 />
                 <form
                     className="login-form"
-                    onSubmit={this.login} >
+                    onSubmit={this.login}
+                     >
                     <input
                         className="login-input-field"
                         type="text"
                         placeholder="username"
-                    />
+                        name="username"
+                    ></input>
                     <input
                         className="login-input-field"
                         type="text"
                         placeholder="password"
-                    />
-                    <button>Log In</button>
+                        name="password"
+                    ></input>
+                    <button 
+                    className="login-button"
+                    >Log In</button>
 
                 </form>
 
