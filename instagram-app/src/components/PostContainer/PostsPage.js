@@ -1,8 +1,5 @@
 import React from 'react'
-
 import SearchBar from '../SearchBar/SearchBar'
-// import SearchBar from './components/SearchBar/SearchBar'
-// import PostContainer from './components/PostContainer/PostContainer'
 import PostContainer from '../PostContainer/PostContainer'
 import dummyData from '../dummy-data'
 
