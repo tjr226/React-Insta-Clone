@@ -4,9 +4,8 @@ import CommentSection from '../CommentSection/CommentSection'
 
 import PropTypes from 'prop-types'
 
-import heartIcon from '../images/heart.png'
-import messageIcon from '../images/speech-bubble.png'
 import PostHeader from './PostHeader';
+import LikeSection from '../CommentSection/LikeSection';
 
 class Post extends React.Component {
     render() {
@@ -20,11 +19,8 @@ class Post extends React.Component {
                 <div className="post-image">
                     <img src={this.props.post.imageUrl} alt="post" />
                 </div>
-                <div className="post-icons">
-                    <img src={heartIcon} alt="heart icon" className="post-icon" />
-                    <img src={messageIcon} alt="message icon" className="post-icon" />
-                </div>
-                <p className="post-likes">{this.props.post.likes} likes</p>
+                
+                <LikeSection likes={this.props.post.likes}/>
 
                 <div className="comment-section">
                     <CommentSection

@@ -11,11 +11,31 @@ class CommentSection extends React.Component {
             comment: '',
         }
     }
-    
+
+    handleComment = event => {
+        this.setState({ comment: event.target.value });
+    };
+
+    addComment = event => {
+        // event.preventDefault();
+        // let newComment = {user: 'browser-user', text: this.state.comment };
+        // this.setState({
+        //     comments: [...this.state.comments, newComment ],
+        //     comment: '',
+        // });
+
+        event.preventDefault();
+        const newComment = { text: this.state.comment, username: 'ryanhamblin' };
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({ comments, comment: '' });
+
+    };
+
     render() {
         return (
             <div>
-                {this.props.comments.map(comment => {
+                {this.state.comments.map(comment => {
                     return <Comment
                         key={comment.id}
                         comment={comment}
@@ -24,8 +44,16 @@ class CommentSection extends React.Component {
                 <p className="timestamp">{moment(this.props.timestamp, "LLL").fromNow()}</p>
 
                 <div className="comment-input-row">
-                    <input placeholder="Add a comment..." />
+                    <form onSubmit={this.addComment}>
+                    <input 
+                        placeholder="Add a comment..." 
+                        type="text"
+                        name="comment"
+                        onChange={this.handleComment}
+                        value={this.state.comment}
+                        />
                     <p>&#8943;</p>
+                    </form>
                 </div>
             </div>
         )
