@@ -6,8 +6,8 @@
 
 ### Daily Setup (Day III)
 
-- To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
-- Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
+- [ x ] To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
+- [ x ] Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
 
 ### Description (Day III)
 
@@ -17,12 +17,12 @@
 
 #### Tasks (Day III)
 
-- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
+- [ ] Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
-  - You'll have to move a lot of what is rendered in `app.js` to this new component
-  - In app.js, render the `PostsPage` component.
-  - Make sure the app working as it was before since it has been re-factored now.
-  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
+  - [ ] You'll have to move a lot of what is rendered in `app.js` to this new component
+  - [ ] In app.js, render the `PostsPage` component.
+  - [ ] Make sure the app working as it was before since it has been re-factored now.
+  - [ ] This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
 
 - Building the High Order Component
 
