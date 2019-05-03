@@ -4,9 +4,10 @@ import instaLogo from '../images/instagram-cursive.png'
 class Login extends React.Component {
     login() {
         localStorage.setItem('username', "username");
+        this.setState(() => {});
     }
 
-    
+
 
     render() {
         return (

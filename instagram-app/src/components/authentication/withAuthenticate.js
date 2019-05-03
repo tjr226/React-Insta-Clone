@@ -1,10 +1,18 @@
 import React from 'react'
 
-const withAuthenticate = App =>
+const withAuthenticate = PostsPage => Login => 
   class extends React.Component {
-    render() {
-      return <App />;
+    constructor(props) {
+        super(props);
+        this.state = {
+            loggedIn: false,
+        };
     }
+
+    render() {
+      return (this.state.loggedIn ? <PostsPage /> : <Login />)
+      }
   };
+
 
 export default withAuthenticate;
