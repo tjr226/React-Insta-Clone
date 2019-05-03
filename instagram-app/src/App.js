@@ -17,19 +17,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="insta-app-container">
-
         <SearchBar />
-        {this.state.posts.map(post =>
-          <PostContainer
-            key={post.id}
-            post={post}
-          />)
-        };
-
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   };
-}
-
+};
 
 export default App;
