@@ -15,7 +15,9 @@ const SearchBar = props => {
                 <p className="pipe">|</p>
                 <img src={instaCursive} alt="instagram logo cursive" className="insta-logo-cursive" />
                 <input 
+                // this seems to match solution
                     className="search-input" 
+                    type="text"
                     placeholder="&#128269; Search"
                     onKeyDown={props.searchPosts}
                 />

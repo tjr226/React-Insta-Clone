@@ -15,10 +15,14 @@ class App extends React.Component {
     this.setState({ posts: dummyData })
   }
 
-  searchPosts = event => {
+  searchPostsHandler = event => {
+    console.log("search posts happening");
+    console.log(this.state.posts);
     const posts = this.state.posts.filter(post => {
       if (post.username.includes(event.target.value)) {
         return post;
+      } else {
+        console.log("filtered out");
       }
     });
     this.setState({ filteredPosts: posts });
@@ -27,8 +31,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="insta-app-container">
-        <SearchBar searchPosts={this.state.searchPosts}/>
-        <PostContainer posts={this.state.posts} />
+        <SearchBar
+
+          // searchTerm={this.state.searchTerm}
+          searchPosts={this.state.searchPostsHandler}
+        />
+        <PostContainer posts={
+          this.state.filteredPosts.length > 0
+            ? this.state.filteredPosts
+            : this.state.posts} />
       </div>
     );
   };

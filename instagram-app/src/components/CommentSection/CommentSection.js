@@ -25,7 +25,7 @@ class CommentSection extends React.Component {
         // });
 
         event.preventDefault();
-        const newComment = { text: this.state.comment, username: 'ryanhamblin' };
+        const newComment = { id: this.state.comment, text: this.state.comment, username: 'ryanhamblin' };
         const comments = this.state.comments.slice();
         comments.push(newComment);
         this.setState({ comments, comment: '' });
