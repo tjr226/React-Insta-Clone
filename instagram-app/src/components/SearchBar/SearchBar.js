@@ -12,6 +12,7 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 0px;
 `;
 
 const InstaLogo = styled.img`
@@ -20,7 +21,7 @@ const InstaLogo = styled.img`
     margin: 0px 10px;
 `;
 
-const Pipe = styled.p`
+const Pipe = styled.div`
     vertical-align: sub;
     `;
 

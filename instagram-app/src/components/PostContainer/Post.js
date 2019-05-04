@@ -11,7 +11,7 @@ class Post extends React.Component {
     render() {
 
         return (
-            <div className="post-container card">
+            <div className="post-container">
                 <PostHeader
                     thumbnailUrl={this.props.post.thumbnailUrl}
                     username={this.props.post.username}
