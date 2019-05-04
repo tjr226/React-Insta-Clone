@@ -1,7 +1,24 @@
 import React from 'react'
-import './CommentSection.css'
 import Comment from '../Comment/Comment'
 import moment from 'moment';
+import styled from "styled-components";
+
+const Timestamp = styled.p`
+    font-size: 0.5rem;
+    color: grey;
+`;
+
+const CommentInputRow = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+`;
+
+const CommentInput = styled.input`
+height: 20px;
+border: none;
+`;
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -17,13 +34,6 @@ class CommentSection extends React.Component {
     };
 
     addComment = event => {
-        // event.preventDefault();
-        // let newComment = {user: 'browser-user', text: this.state.comment };
-        // this.setState({
-        //     comments: [...this.state.comments, newComment ],
-        //     comment: '',
-        // });
-
         event.preventDefault();
         const newComment = { 
             id: this.state.comment, 
@@ -45,11 +55,11 @@ class CommentSection extends React.Component {
                         comment={comment}
                     />
                 })}
-                <p className="timestamp">{moment(this.props.timestamp, "LLL").fromNow()}</p>
+                <Timestamp>{moment(this.props.timestamp, "LLL").fromNow()}</Timestamp>
 
-                <div className="comment-input-row">
+                <CommentInputRow>
                     <form onSubmit={this.addComment}>
-                    <input 
+                    <CommentInput
                         placeholder="Add a comment..." 
                         type="text"
                         name="comment"
@@ -58,7 +68,7 @@ class CommentSection extends React.Component {
                         />
                     <p>&#8943;</p>
                     </form>
-                </div>
+                </CommentInputRow>
             </div>
         )
     }
