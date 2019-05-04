@@ -1,14 +1,24 @@
 import React from 'react'
-import './Comment.css'
 import PropTypes from 'prop-types';
+import styled from "styled-components";
+
+const IndividualCommment = styled.div`
+    display: flex;
+    font-size: .8rem;
+`;
+
+const CommentUsername = styled.p`
+    font-weight: bold;
+    padding-right: 1%;
+`;
 
 
 function Comment(props) {
     return (
-        <div className="individual-comment">
-            <p className="comment-username">{props.comment.username}</p>
+        <IndividualCommment>
+            <CommentUsername>{props.comment.username}</CommentUsername>
             <p className="comment-text">{props.comment.text}</p>
-        </div>
+        </IndividualCommment>
     )
 }
 
