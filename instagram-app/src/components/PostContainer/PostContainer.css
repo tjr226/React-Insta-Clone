@@ -1,12 +1,5 @@
-.post-container {
-   margin: 2px;
-   border: 1px solid lightgrey;
-}
 
-.post-image img {
-    width: 98%;
-    padding: 5px 1%;
-}
+
 
 .post-icons {
     padding-left: 2%;
@@ -24,6 +17,3 @@
     font-size: .8rem;
 }
 
-.comment-section {
-    padding: 0% 2%;
-}

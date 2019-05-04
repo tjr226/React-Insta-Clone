@@ -3,32 +3,44 @@ import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection'
 
 import PropTypes from 'prop-types'
+import styled from "styled-components";
 
 import PostHeader from './PostHeader';
 import LikeSection from '../CommentSection/LikeSection';
+
+const PostContainer = styled.div`
+    margin: 2px;
+    border: 1px solid lightgrey;  
+`;
+
+const PostImage = styled.img`
+    width: 98%;
+    padding: 5px 1%;
+`;
+
+const CommentSectionDiv = styled.div`
+    padding: 0% 2%;
+`;
 
 class Post extends React.Component {
     render() {
 
         return (
-            <div className="post-container">
+            <PostContainer>
                 <PostHeader
                     thumbnailUrl={this.props.post.thumbnailUrl}
                     username={this.props.post.username}
                 />
-                <div className="post-image">
-                    <img src={this.props.post.imageUrl} alt="post" />
-                </div>
-                
-                <LikeSection likes={this.props.post.likes}/>
+                <PostImage src={this.props.post.imageUrl} alt="post" />
+                <LikeSection likes={this.props.post.likes} />
 
-                <div className="comment-section">
+                <CommentSectionDiv>
                     <CommentSection
                         comments={this.props.post.comments}
                         timestamp={this.props.post.timestamp}
                     />
-                </div>
-            </div>
+                </CommentSectionDiv>
+            </PostContainer>
 
 
         )
