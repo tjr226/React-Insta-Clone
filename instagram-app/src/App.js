@@ -3,16 +3,21 @@ import './App.css'
 import PostsPage from './components/PostContainer/PostsPage';
 import withAuthenticate from './components/authentication/withAuthenticate';
 import Login from './components/Login/Login';
+import styled from "styled-components";
 
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
+
+const InstAppContainer = styled.div`
+  width: 400px;
+`;
 
 class App extends React.Component {
   
   render() {
     return (
-      <div className="insta-app-container">
+      <InstAppContainer>
         <ComponentFromWithAuthenticate />  
-      </div>
+      </InstAppContainer>
     );
   };
 };

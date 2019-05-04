@@ -32,6 +32,9 @@ const InstaLogoCursive = styled.img`
 
 const SearchInput = styled.input`
     height: 20px;
+    ::placeholder {
+        text-align: center;
+    }
 `;
 
 const IconSection = styled.div`

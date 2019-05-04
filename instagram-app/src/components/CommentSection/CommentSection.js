@@ -16,8 +16,11 @@ const CommentInputRow = styled.div`
 `;
 
 const CommentInput = styled.input`
-height: 20px;
-border: none;
+    height: 20px;
+    border: none;
+    ::placeholder {
+        font-size: .8rem;
+    }
 `;
 
 class CommentSection extends React.Component {

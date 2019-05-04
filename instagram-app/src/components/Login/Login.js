@@ -19,7 +19,7 @@ const LoginForm = styled.form`
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
-    input::placeholder {
+    ::placeholder {
         text-align: center;
     }
 `;
